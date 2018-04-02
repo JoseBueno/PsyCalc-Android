@@ -76,5 +76,9 @@ as PsyCalc® return results accurate enough for
 the users needs."
 
     </string>
+    <string name="label_airstream_a">Airstream A</string>
+    <string name="label_airstream_b">Airstream B</string>
+    <string name="label_scroll_requires_standard_volumes">Scroll requires Standard Volumes</string>
+    <string name="label_mixed_air">Mixed Air</string>
 
 </resources>

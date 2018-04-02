@@ -15,8 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.linric.psycalc.adapters.CalculationResultsAdapter;
-import com.linric.psycalc.enums.AltitudeChoiceDesignator;
-import com.linric.psycalc.enums.FieldChoiceDesignator;
 import com.linric.psycalc.enums.MeasurementSystem;
 import com.linric.psycalc.interfaces.DialogOptionSelected;
 import com.linric.psycalc.models.CalculationResult;
@@ -56,7 +54,7 @@ public class PointCalculatorFragment
         View view = inflater.inflate(R.layout.fragment_point_calculator, container, false);
         initUI(view);
         loadArrays(Settings.getInstance().getInputMeasurementSystem());
-        setButtonLabels();
+        initButtonLabels();
         loadEmptyResults();
         return view;
     }
@@ -73,7 +71,7 @@ public class PointCalculatorFragment
 
     }
 
-    private void setButtonLabels() {
+    private void initButtonLabels() {
         Settings settings = Settings.getInstance();
 
         selectedAltitudeOption = settings.getAltitudeChoice().getIndex();
@@ -115,8 +113,6 @@ public class PointCalculatorFragment
             if (optionsDialogBuilder == null) {
                 optionsDialogBuilder = new OptionsDialogBuilder(getContext(), PointCalculatorFragment.this);
             }
-
-            Settings settings = Settings.getInstance();
 
             switch (v.getId()) {
                 case R.id.btnPointAltitude:
@@ -173,8 +169,6 @@ public class PointCalculatorFragment
 
     @Override
     public void updateTarget(int target, String[] choices, int selected) {
-
-        Settings settings = Settings.getInstance();
 
         switch (target) {
             case R.id.btnPointAltitude:

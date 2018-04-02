@@ -84,7 +84,7 @@ public class Settings {
                 .apply();
     }
 
-    public FieldChoiceDesignator getInputFlowMeasurementSystem() {
+    public FieldChoiceDesignator getInputFlowFieldChoice() {
         return FieldChoiceDesignator
                 .fromInteger(
                         sharedPreferences.getInt(DEFAULT_INPUT_FLOW_FIELD_CHOICE, 0));

@@ -15,6 +15,7 @@ public class HostActivity extends AppCompatActivity {
     private BottomNavigationView navigationView;
 
     private static final String TAG_FRAGMENT_POINT = "PointFragment";
+    private static final String TAG_FRAGMENT_MIXING = "MixingFragment";
     private static final String TAG_FRAGMENT_INFO = "InfoFragment";
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -32,14 +33,22 @@ public class HostActivity extends AppCompatActivity {
                     target = getFragmentManager().findFragmentByTag(TAG_FRAGMENT_POINT);
                     if (target == null) {
                         target = new PointCalculatorFragment();
-                        transaction.add(R.id.fragmentMain, target, TAG_FRAGMENT_POINT);
-                    } else {
-                        transaction.replace(R.id.fragmentMain, target, TAG_FRAGMENT_POINT);
                     }
-                    transaction.addToBackStack(null).commit();
+                    transaction
+                            .replace(R.id.fragmentMain, target, TAG_FRAGMENT_POINT)
+                            .addToBackStack(null)
+                            .commit();
                     return true;
                 case R.id.navigation_mixing:
                     mTextMessage.setText(R.string.menu_mixing);
+                    target = getFragmentManager().findFragmentByTag(TAG_FRAGMENT_MIXING);
+                    if (target == null) {
+                        target = new MixingCalculatorFragment();
+                    }
+                    transaction
+                            .replace(R.id.fragmentMain, target, TAG_FRAGMENT_MIXING)
+                            .addToBackStack(null)
+                            .commit();
                     return true;
                 case R.id.navigation_process:
                     mTextMessage.setText(R.string.menu_process);
@@ -52,11 +61,11 @@ public class HostActivity extends AppCompatActivity {
                     target = getFragmentManager().findFragmentByTag(TAG_FRAGMENT_INFO);
                     if (target == null) {
                         target = new InfoFragment();
-                        transaction.add(R.id.fragmentMain, target, TAG_FRAGMENT_INFO);
-                    } else {
-                        transaction.replace(R.id.fragmentMain, target, TAG_FRAGMENT_INFO);
                     }
-                    transaction.addToBackStack(null).commit();
+                    transaction
+                            .replace(R.id.fragmentMain, target, TAG_FRAGMENT_INFO)
+                            .addToBackStack(null)
+                            .commit();
                     return true;
             }
             return false;

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_mixing"
+    android:layout_marginTop="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineStartInner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineEndInner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <EditText
+        android:id="@+id/txtMixingAltitude"
+        style="@style/editTextOldSchool"
+        android:background="@drawable/edit_text_drawable"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartInner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMixingAltitude"
+        style="@style/buttonOldSchool"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEndInner"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@id/txtMixingAltitude" />
+
+    <TextView
+        android:id="@+id/lblAirstreamA"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_airstream_a"
+        app:layout_constraintTop_toBottomOf="@id/txtMixingAltitude"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+        style="@style/boldLabel" />
+
+    <EditText
+        android:id="@+id/txtMixingInputOneA"
+        style="@style/editTextOldSchool"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/lblAirstreamA"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@id/btnMixingInputOneA"/>
+
+    <Button
+        android:id="@+id/btnMixingInputOneA"
+        style="@style/buttonOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneA"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenter" />
+
+    <EditText
+        android:id="@+id/txtMixingInputOneB"
+        style="@style/editTextOldSchool"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/txtMixingInputOneA"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@id/btnMixingInputOneB"/>
+
+    <Button
+        android:id="@+id/btnMixingInputOneB"
+        style="@style/buttonOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneB"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenter"/>
+
+    <EditText
+        android:id="@+id/txtMixingInputOneAirflow"
+        style="@style/editTextOldSchool"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/txtMixingInputOneB"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@id/btnMixingInputOneAirflow"/>
+
+    <Button
+        android:id="@+id/btnMixingInputOneAirflow"
+        style="@style/buttonOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneAirflow"
+        app:layout_constraintEnd_toEndOf="@id/guidelineCenter"/>
+
+    <TextView
+        android:id="@+id/lblAirstreamB"
+        android:text="@string/label_airstream_b"
+        app:layout_constraintBaseline_toBaselineOf="@id/lblAirstreamA"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        style="@style/boldLabel"/>
+
+    <EditText
+        android:id="@+id/txtMixingInputTwoA"
+        style="@style/editTextOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneA"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintEnd_toStartOf="@id/btnMixingInputTwoA"/>
+
+    <Button
+        android:id="@+id/btnMixingInputTwoA"
+        style="@style/buttonOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputTwoA"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+    <EditText
+        android:id="@+id/txtMixingInputTwoB"
+        style="@style/editTextOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneB"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintEnd_toStartOf="@id/btnMixingInputTwoB"/>
+
+    <Button
+        android:id="@+id/btnMixingInputTwoB"
+        style="@style/buttonOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputTwoB"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+    <EditText
+        android:id="@+id/txtMixingInputTwoAirflow"
+        style="@style/editTextOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneAirflow"
+        app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+        app:layout_constraintEnd_toStartOf="@id/btnMixingInputTwoAirflow"/>
+
+    <Button
+        android:id="@+id/btnMixingInputTwoAirflow"
+        style="@style/buttonOldSchool"
+        app:layout_constraintTop_toTopOf="@id/txtMixingInputOneAirflow"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+    <SeekBar
+        android:id="@+id/seekBarFlowRatio"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:progress="50"
+        android:splitTrack="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndInner"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartInner"
+        app:layout_constraintTop_toBottomOf="@id/txtMixingInputOneAirflow" />
+
+    <TextView
+        android:id="@+id/txtScrollWarning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_scroll_requires_standard_volumes"
+        app:layout_constraintTop_toTopOf="@id/seekBarFlowRatio"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartInner"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndInner"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/lblMixedAirOutput"
+        style="@style/boldLabel"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_mixed_air"
+        app:layout_constraintTop_toBottomOf="@id/seekBarFlowRatio"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartInner"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndInner"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lstMixingCalcResults"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartInner"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndInner"
+        app:layout_constraintTop_toBottomOf="@id/lblMixedAirOutput"
+        tools:listitem="@layout/listitem_calc_result" />
+
+
+</android.support.constraint.ConstraintLayout>
