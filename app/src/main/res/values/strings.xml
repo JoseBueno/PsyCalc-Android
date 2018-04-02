@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">PsyCalc</string>
+    <string name="title_activity_host">HostActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="label_input">Input</string>
+    <string name="label_alt_in_ft">Alt in Ft</string>
+    <string name="label_output">Output</string>
+    <string name="menu_point">Point</string>
+    <string name="menu_mixing">Mixing</string>
+    <string name="menu_process">Process</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_info">Info</string>
+    <string name="text_info">
+        "Psychrometrics is the study of
+air and water vapor mixtures; temperature,
+relative humidity and dew point are some
+common psychrometric properties. PsyCalc®
+provides direct access to these and other
+properties plus mixing and process calculators.
+
+PsyCalc® is used by thousands of users on their
+desktop. It uses the most widely accepted
+psychrometric calculation routines available
+and provides an easy to use interface with immediate
+results.
+
+PsyCalc tab - find psychrometric properties.
+Mixing tab - perform air mixing calculations.
+Process tab - point-to-point load calculations.
+Defaults tab - set start up defaults.
+
+This version of PsyCalc® functions the same as
+previous desktop versions. Set input property
+types using the button to the right of each value.
+Enter input property values. Results update
+immediately upon any change.
+
+'Exceeds Limits' is displayed if the calculation
+is beyond limits or unavailable.
+
+Air and Water Vapor Properties in PsyCalc®
+Psychrometric -
+   °Fdb / °Cdb - Dry Bulb Temperature
+   °Fwb / °Cwb - Wet Bulb Temperature
+   %RH - Relative Humidity
+   Btu/lb / kJ/kg - Enthalpy
+   °Fdp / °Cdp - Dew Point Temperature
+   gr/lb / g/kg - Humidity Ratio
+   ft≥/lb - m≥/kg - Specific Volume
+   in Hg VP / mm Hg VP - Vapor Pressure
+   lb/ft³ / kg/m³ - Density
+   PPMw - Parts Per Million by weight
+   PPMv - Parts Per Million by volume
+   gr/ft³ / g/m³ - Absolute Humidity
+
+Pressure -
+   Alt in Ft / m - Altitude (elevation).
+   psia / kPa - Absolute Pressure.
+
+PsyCalc® Limits -
+Dry bulb Temperature: °F / °C
+	-80 to 1500  /  -62.2 to 815.5
+Dew Point Temperature: °F / °C
+	-80 to 200  /  -62.2 to 93.3
+Absolute Pressure: psia / kPa
+	0.7 to 400  13.8 to 2757
+
+Because all calculations that model physical
+phenomenon are to some extent approximations
+users should always check to see that tools such
+as PsyCalc® return results accurate enough for
+the users needs."
+
+    </string>
+
+</resources>

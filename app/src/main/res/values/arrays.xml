@@ -1,0 +1,71 @@
+<resources>
+    <string-array name="inputAltitudeChoiceIP">
+        <item>Alt in Ft</item>
+        <item>Inch H2O</item>
+        <item>Inch Hg</item>
+        <item>psia</item>
+    </string-array>
+
+    <string-array name="inputAltitudeChoiceSI">
+        <item>Alt in m</item>
+        <item>mm H2O</item>
+        <item>mm Hg</item>
+        <item>kPa</item>
+    </string-array>
+
+    <string-array name="inputUnitsIP">
+        <item>°F db</item>
+        <item>°F wb</item>
+        <item>% RH</item>
+        <item>Btu/lb</item>
+        <item>°F dp</item>
+        <item>gr/lb</item>
+    </string-array>
+
+    <string-array name="inputUnitsSI">
+        <item>°C db</item>
+        <item>°C wb</item>
+        <item>% RH</item>
+        <item>kJ/kg</item>
+        <item>°C dp</item>
+        <item>g/kg</item>
+    </string-array>
+
+    <string-array name="inputFlowChoiceIP">
+        <item>SCFM</item>
+        <item>ACFM</item>
+    </string-array>
+
+    <string-array name="inputFlowChoiceSI">
+        <item>SCMH</item>
+        <item>ACMH</item>
+    </string-array>
+
+    <string-array name="outputUnitsSI">
+        <item>°C db</item>
+        <item>°C wb</item>
+        <item>%RH</item>
+        <item>kJ/kg</item>
+        <item>°C dp</item>
+        <item>g/kg</item>
+        <item>m³/kg</item>
+        <item>kPa VP</item>
+        <item>PPMw</item>
+        <item>PPMv</item>
+        <item>g/m³</item>
+    </string-array>
+
+    <string-array name="outputUnitsIP">
+        <item>°F db</item>
+        <item>°F wb</item>
+        <item>%RH</item>
+        <item>Btu/lb</item>
+        <item>°F dp</item>
+        <item>gr/lb</item>
+        <item>ft³/lb</item>
+        <item>in Hg vp</item>
+        <item>PPMw</item>
+        <item>PPMv</item>
+        <item>gr/ft³</item>
+    </string-array>
+</resources>

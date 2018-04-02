@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <EditText
+        android:id="@+id/txtPointAltitude"
+        style="@style/editTextOldSchool"
+        android:background="@drawable/edit_text_drawable"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPointAltitude"
+        style="@style/buttonOldSchool"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@id/txtPointAltitude" />
+
+    <TextView
+        android:id="@+id/lblInput"
+        style="@style/boldLabel"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_input"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/txtPointAltitude" />
+
+    <EditText
+        android:id="@+id/txtPointInputOne"
+        style="@style/editTextOldSchool"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/lblInput" />
+
+    <Button
+        android:id="@+id/btnPointInputOne"
+        style="@style/buttonOldSchool"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@id/txtPointInputOne" />
+
+    <EditText
+        android:id="@+id/txtPointInputTwo"
+        style="@style/editTextOldSchool"
+        android:layout_width="0dp"
+        android:layout_marginTop="4dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/txtPointInputOne" />
+
+    <Button
+        android:id="@+id/btnPointInputTwo"
+        style="@style/buttonOldSchool"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@id/txtPointInputTwo" />
+
+    <TextView
+        android:id="@+id/lblOutput"
+        style="@style/boldLabel"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_output"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/txtPointInputTwo" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lstPointCalcResults"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="@id/lblOutput"
+        app:layout_constraintStart_toStartOf="@id/lblOutput"
+        app:layout_constraintTop_toBottomOf="@id/lblOutput"
+        tools:listitem="@layout/listitem_calc_result" />
+
+</android.support.constraint.ConstraintLayout>
+
