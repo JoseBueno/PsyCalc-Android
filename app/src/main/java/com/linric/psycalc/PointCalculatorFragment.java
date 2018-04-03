@@ -2,13 +2,16 @@ package com.linric.psycalc;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -97,13 +100,14 @@ public class PointCalculatorFragment
         btnPointInputOne = view.findViewById(R.id.btnPointInputOne);
         btnPointInputTwo = view.findViewById(R.id.btnPointInputTwo);
 
-        lstPointCalcResults = view.findViewById(R.id.lstPointCalcResults);
-        lstPointCalcResults.setHasFixedSize(true);
-        lstPointCalcResults.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-
         btnPointAltitude.setOnClickListener(onSomethingClicked);
         btnPointInputOne.setOnClickListener(onSomethingClicked);
         btnPointInputTwo.setOnClickListener(onSomethingClicked);
+
+
+        lstPointCalcResults = view.findViewById(R.id.lstPointCalcResults);
+        lstPointCalcResults.setHasFixedSize(true);
+        lstPointCalcResults.setLayoutManager(new LinearLayoutManager(getActivity()));
 
     }
 
@@ -164,7 +168,6 @@ public class PointCalculatorFragment
         }
 
         lstPointCalcResults.setAdapter(new CalculationResultsAdapter(results));
-
     }
 
     @Override

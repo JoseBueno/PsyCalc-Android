@@ -14,19 +14,18 @@
 
     <TextView
         android:id="@+id/lblResultValue"
+        style="@style/editTextOldSchool"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
-        style="@style/editTextOldSchool"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/lblResultUOMDisplay"
         android:layout_width="0dp"
-        android:layout_height="28dp"
         app:layout_constraintStart_toStartOf="@id/guidelineCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/lblResultValue"
